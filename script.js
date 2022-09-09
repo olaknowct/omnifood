@@ -48,3 +48,13 @@ const option = { root: null, threshold: 0, rootMargin: "-80px" };
 const obs = new IntersectionObserver(callback, option);
 
 obs.observe(sectionHeroEl);
+
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
